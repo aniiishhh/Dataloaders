@@ -24,6 +24,5 @@ class T2I_Dataset(Dataset):
 
         return caption, image
 
-
 if __name__ == "__main__":
     print(T2I_Dataset("Test Data").__getitem__(1))

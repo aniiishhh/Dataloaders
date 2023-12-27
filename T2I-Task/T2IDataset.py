@@ -1,5 +1,5 @@
 from torch.utils.data import Dataset
-from torchvision.io import read_image
+from code_utils import read_image_with_any_extension
 import os
 import pandas as pd
 
@@ -14,9 +14,9 @@ class T2I_Dataset(Dataset):
         return len(self.captions)
 
     def __getitem__(self, idx):
-        img_filename = str(self.captions.iloc[idx, 0]) + ".jpg"
+        img_filename = str(self.captions.iloc[idx, 0])
         img_path = os.path.join(self.data_dir, "Images", img_filename)
-        image = read_image(img_path)
+        image = read_image_with_any_extension(img_path)
         caption = self.captions.iloc[idx, 1]
 
         # if self.transforms:

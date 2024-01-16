@@ -25,11 +25,8 @@ parser.add_argument(
     "--m",
     choices=[
         "DPT_Large",
-        "MiDaS v3 - Large",
         "DPT_Hybrid",
-        "MiDaS v3 - Hybrid",
         "MiDaS_small",
-        "MiDaS v2.1 - Small",
     ],
     default="MiDaS_small",
     help="Choose a model. Default is MiDaS_small.",

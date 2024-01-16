@@ -19,8 +19,6 @@ parser.add_argument("--i", type=str, required=True, help="Path to the input dire
 parser.add_argument(
     "--o", type=str, default="./Output", help="Path to the output directory."
 )
-
-
 parser.add_argument(
     "--m",
     choices=[
